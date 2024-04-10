@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace autoberles_dt
 {
-    public partial class Form1 : Form
+    public partial class Ujautofelvitele : Form
     {
-        public Form1()
+        public Ujautofelvitele()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Ujautofelvitele Ujautofelvitele = new Ujautofelvitele();
-            Ujautofelvitele.ShowDialog();
         }
     }
 }
