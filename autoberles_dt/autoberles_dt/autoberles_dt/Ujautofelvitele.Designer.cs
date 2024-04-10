@@ -35,12 +35,13 @@ namespace autoberles_dt
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.rendSzamBox = new System.Windows.Forms.TextBox();
+            this.szinBox = new System.Windows.Forms.TextBox();
+            this.nevBox = new System.Windows.Forms.TextBox();
+            this.evjaratBox = new System.Windows.Forms.TextBox();
+            this.berlesArBox = new System.Windows.Forms.TextBox();
+            this.kategoriaBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -97,59 +98,71 @@ namespace autoberles_dt
             this.label6.TabIndex = 5;
             this.label6.Text = "Kategória:";
             // 
-            // textBox1
+            // rendSzamBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(215, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
+            this.rendSzamBox.Location = new System.Drawing.Point(215, 48);
+            this.rendSzamBox.Name = "rendSzamBox";
+            this.rendSzamBox.Size = new System.Drawing.Size(100, 20);
+            this.rendSzamBox.TabIndex = 6;
+            this.rendSzamBox.TextChanged += new System.EventHandler(this.rendSzamBox_TextChanged);
             // 
-            // textBox2
+            // szinBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(215, 108);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 7;
+            this.szinBox.Location = new System.Drawing.Point(215, 108);
+            this.szinBox.Name = "szinBox";
+            this.szinBox.Size = new System.Drawing.Size(100, 20);
+            this.szinBox.TabIndex = 7;
             // 
-            // textBox3
+            // nevBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(215, 162);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 8;
+            this.nevBox.Location = new System.Drawing.Point(215, 162);
+            this.nevBox.Name = "nevBox";
+            this.nevBox.Size = new System.Drawing.Size(100, 20);
+            this.nevBox.TabIndex = 8;
             // 
-            // textBox4
+            // evjaratBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(215, 226);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 9;
+            this.evjaratBox.Location = new System.Drawing.Point(215, 226);
+            this.evjaratBox.Name = "evjaratBox";
+            this.evjaratBox.Size = new System.Drawing.Size(100, 20);
+            this.evjaratBox.TabIndex = 9;
             // 
-            // textBox5
+            // berlesArBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(215, 278);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 10;
+            this.berlesArBox.Location = new System.Drawing.Point(215, 278);
+            this.berlesArBox.Name = "berlesArBox";
+            this.berlesArBox.Size = new System.Drawing.Size(100, 20);
+            this.berlesArBox.TabIndex = 10;
             // 
-            // textBox6
+            // kategoriaBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(215, 325);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 11;
+            this.kategoriaBox.Location = new System.Drawing.Point(215, 325);
+            this.kategoriaBox.Name = "kategoriaBox";
+            this.kategoriaBox.Size = new System.Drawing.Size(100, 20);
+            this.kategoriaBox.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(436, 184);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Felvétel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Ujautofelvitele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(619, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.kategoriaBox);
+            this.Controls.Add(this.berlesArBox);
+            this.Controls.Add(this.evjaratBox);
+            this.Controls.Add(this.nevBox);
+            this.Controls.Add(this.szinBox);
+            this.Controls.Add(this.rendSzamBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -171,11 +184,12 @@ namespace autoberles_dt
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox rendSzamBox;
+        private System.Windows.Forms.TextBox szinBox;
+        private System.Windows.Forms.TextBox nevBox;
+        private System.Windows.Forms.TextBox evjaratBox;
+        private System.Windows.Forms.TextBox berlesArBox;
+        private System.Windows.Forms.TextBox kategoriaBox;
+        private System.Windows.Forms.Button button1;
     }
 }
